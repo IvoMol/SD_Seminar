@@ -11,8 +11,8 @@ table 50104 "CSD Seminar Comment Line"
         field(10; "Table Name"; Option)
         {
             Caption = 'Table Name';
-            OptionMembers = "Seminar","Seminar Registration Header","Posted Seminar Registration";
-            OptionCaption = 'Seminar,Seminar Registration Header,Posted Seminar Registration';
+            OptionMembers = "Seminar","Seminar Registration","Posted Seminar Registration";
+            OptionCaption = 'Seminar,Seminar Registration,Posted Seminar Registration';
             DataClassification = CustomerContent;
         }
         field(20; "Document Line No."; Integer)

@@ -1,12 +1,13 @@
 page 50121 "CSD Seminar Ledger Entries"
 // CSD1.00 - 2018-01-01 - D. E. Veloper
 // Chapter 7 - Lab 2-9
-
+//   Chapter 8 - Lab 2 - 4
+//   Added Action Navigate
 {
-    Caption='Seminar Ledger Entries';
+    Caption = 'Seminar Ledger Entries';
     PageType = List;
     SourceTable = "CSD Seminar Ledger Entry";
-    Editable=false;
+    Editable = false;
 
     layout
     {
@@ -14,76 +15,98 @@ page 50121 "CSD Seminar Ledger Entries"
         {
             repeater(Group)
             {
-                field("Posting Date";"Posting Date")
+                field("Posting Date"; "Posting Date")
                 {
                 }
-                field("Document No.";"Document No.")
+                field("Document No."; "Document No.")
                 {
                 }
-                field("Document Date";"Document Date")
+                field("Document Date"; "Document Date")
                 {
-                    Visible=false;
+                    Visible = false;
                 }
-                field("Entry Type";"Entry Type")
-                {
-                }
-                field("Seminar No.";"Seminar No.")
+                field("Entry Type"; "Entry Type")
                 {
                 }
-                field(Description;Description)
+                field("Seminar No."; "Seminar No.")
                 {
                 }
-                field("Bill-to Customer No.";"Bill-to Customer No.")
+                field(Description; Description)
                 {
                 }
-                field("Charge Type";"Charge Type")
+                field("Bill-to Customer No."; "Bill-to Customer No.")
                 {
                 }
-                field(Type;Type)
+                field("Charge Type"; "Charge Type")
                 {
                 }
-                field(Quantity;Quantity)
+                field(Type; Type)
                 {
                 }
-                field("Unit Price";"Unit Price")
+                field(Quantity; Quantity)
                 {
                 }
-                field("Total Price";"Total Price")
+                field("Unit Price"; "Unit Price")
                 {
                 }
-                field(Chargeable;Chargeable)
+                field("Total Price"; "Total Price")
                 {
                 }
-                field("Participant Contact No.";"Participant Contact No.")
+                field(Chargeable; Chargeable)
                 {
                 }
-                field("Participant Name";"Participant Name")
+                field("Participant Contact No."; "Participant Contact No.")
                 {
                 }
-                field("Instructor Resource No.";"Instructor Resource No.")
+                field("Participant Name"; "Participant Name")
                 {
                 }
-                field("Room Resource No.";"Room Resource No.")
+                field("Instructor Resource No."; "Instructor Resource No.")
                 {
                 }
-                field("Starting Date";"Starting Date")
+                field("Room Resource No."; "Room Resource No.")
                 {
                 }
-                field("Seminar Registration No.";"Seminar Registration No.")
+                field("Starting Date"; "Starting Date")
                 {
                 }
-                field("Entry No.";"Entry No.")
-                {     
+                field("Seminar Registration No."; "Seminar Registration No.")
+                {
+                }
+                field("Entry No."; "Entry No.")
+                {
                 }
             }
         }
         area(factboxes)
         {
-            systempart("Notes";Notes)
+            systempart("Notes"; Notes)
             {
             }
-            systempart("links";Links)
+            systempart("links"; Links)
             {
+            }
+        }
+    }
+
+    actions
+    {
+        area(Processing)
+        {
+            action("&Navigate")
+            {
+                Caption = '&Navigate';
+                Image = Navigate;
+                Promoted = true;
+                PromotedCategory = Process;
+
+                trigger OnAction();
+                var
+                    Navigate: page Navigate;
+                begin
+                    Navigate.SetDoc("Posting Date", "Document No.");
+                    Navigate.RUN;
+                end;
             }
         }
     }

@@ -19,27 +19,21 @@ page 50102 "CSD Seminar List"
             {
                 field("No."; "No.")
                 {
-                    ApplicationArea = All;
                 }
                 field(Name; Name)
                 {
-                    ApplicationArea = All;
                 }
                 field("Seminar Duration"; "Seminar Duration")
                 {
-                    ApplicationArea = All;
                 }
                 field("Seminar Price"; "Seminar Price")
                 {
-                    ApplicationArea = All;
                 }
                 field("Minimum Participants"; "Minimum Participants")
                 {
-                    ApplicationArea = All;
                 }
                 field("Maximum Participants"; "Maximum Participants")
                 {
-                    ApplicationArea = All;
                 }
             }
         }
@@ -107,6 +101,7 @@ page 50102 "CSD Seminar List"
                 Image = NewTimesheet;
                 Promoted = true;
                 PromotedCategory = New;
+
             }
         }
         // << Lab 8-2
