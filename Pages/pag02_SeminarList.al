@@ -72,17 +72,17 @@ page 50102 "CSD Seminar List"
                     PromotedOnly = true;
                 }
                 // >> Lab 8-2
-                // action("Ledger Entries")
-                // {
-                //     Caption='Ledger Entries';
-                //     RunObject=page "CSD Seminar Ledger Entries";
-                //     RunPageLink="Seminar No."=field("No.");
-                //     Promoted=true;
-                //     PromotedCategory=Process;
-                //     ShortcutKey="Ctrl+F7";
-                //     Image=WarrantyLedger;
-                // }
-                // // >> Lab 8-2
+                action("Ledger Entries")
+                {
+                    Caption = 'Ledger Entries';
+                    RunObject = page "CSD Seminar Ledger Entries";
+                    RunPageLink = "Seminar No." = field ("No.");
+                    Promoted = true;
+                    PromotedCategory = Process;
+                    ShortcutKey = "Ctrl+F7";
+                    Image = WarrantyLedger;
+                }
+                // >> Lab 8-2
                 action("&Registrations")
                 {
                     Caption = '&Registrations';
