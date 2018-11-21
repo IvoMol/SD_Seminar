@@ -1,4 +1,5 @@
 .alpackages/
+.netpackages/
 .vscode/
 *.app
 *.*_
